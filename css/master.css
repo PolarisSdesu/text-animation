@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Source Han Serif';
+    src: url(../fonts/light.otf);
+}
+
+body{
+    --bg-color: rgb(255, 255, 255);
+    --color: rgb(17, 0, 255);
+    background-color: var(--bg-color);
+    font-family: 'Source Han Serif';
+}
+
+.title-box{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    margin: -10px 0 0 0;
+    display: flex;
+    color: var(--color);
+    font-size: 42px;
+    letter-spacing: -2px;
+}
+
+.title span{
+    font-style: italic;
+    opacity: 0;
+    animation: anime 1s cubic-bezier(0.72, 0.36, 0.3, 1.03) forwards var(--delay);
+}
+
+@keyframes anime{
+    from {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
